@@ -3,7 +3,9 @@
 
 require __DIR__.'/vendor/autoload.php';
 
+use Command\ConvertCsvCommand;
 use Symfony\Component\Console\Application;
 
 $application = new Application();
+$application->add(new ConvertCsvCommand());
 $application->run();
